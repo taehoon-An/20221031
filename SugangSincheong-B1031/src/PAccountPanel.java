@@ -1,0 +1,27 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class PAccountPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
+
+	public PAccountPanel(String name) {
+		JLabel lName = new JLabel(name);
+		this.add(lName);
+
+		JLabel lInsa = new JLabel("씨 안영하세요!");
+		this.add(lInsa);
+
+		JLabel lLogin = new JLabel("로그인 시간은");
+		this.add(lLogin);
+
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy년 MM월 dd일 hh시 mm분");
+		JLabel lTime = new JLabel(simpleDateFormat.format(new Date()));
+		this.add(lTime);
+
+		JLabel lText = new JLabel("입니다.");
+		this.add(lText);
+	}
+}
